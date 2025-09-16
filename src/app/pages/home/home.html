@@ -1,0 +1,85 @@
+<section class="hero-section">
+  <div class="hero-video-wrapper">
+    <video playsinline autoplay muted loop poster="assets/images/hero-poster.jpg" id="bgvid">
+      <source src="assets/videos/hero-background.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-content">
+    <h1 class="hero-title">CONSTRUYE LA REALIDAD DEFINITIVA</h1>
+    <p class="hero-subtitle">Componentes de élite para el rendimiento que exiges. Tu próxima victoria empieza aquí.</p>
+    <div class="hero-cta-group">
+      <a href="#" class="btn btn-primary">Ver Ofertas del Mes</a>
+      <a href="#" class="btn btn-secondary">Arma tu PC</a>
+    </div>
+  </div>
+</section>
+
+<section class="features-section">
+  <div class="feature-item">
+    <i class="feature-icon truck-icon"></i> <h3>Envíos Express</h3>
+    <p>Recibe tus componentes en 24/48 horas.</p>
+  </div>
+  <div class="feature-item">
+    <i class="feature-icon support-icon"></i> <h3>Soporte Experto</h3>
+    <p>Te ayudamos a elegir lo mejor para tu build.</p>
+  </div>
+  <div class="feature-item">
+    <i class="feature-icon warranty-icon"></i> <h3>Garantía Total</h3>
+    <p>Componentes 100% originales y garantizados.</p>
+  </div>
+</section>
+
+<section class="content-section">
+  <h2 class="section-title"><span>Explora Nuestras Categorías</span></h2>
+  <div class="category-grid">
+    <div class="category-card" *ngFor="let category of featuredCategories">
+      <img [src]="category.imageUrl" [alt]="category.name">
+      <div class="category-name">{{ category.name }}</div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section bg-darker">
+  <h2 class="section-title"><span>Ofertas que Queman</span></h2>
+  <div class="product-grid">
+    <div class="product-card" *ngFor="let product of hotDeals">
+      <div class="product-image">
+        <img [src]="product.imageUrl" [alt]="product.name">
+        <span class="product-tag deal-tag">OFERTA</span>
+      </div>
+      <div class="product-info">
+        <p class="product-category">{{ product.category }}</p>
+        <h3 class="product-name">{{ product.name }}</h3>
+        <p class="product-price">${{ product.price }}</p>
+        <a href="#" class="btn btn-primary btn-small">Añadir al Carrito</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-builder-section">
+  [Image of a high-end custom PC build]
+  <div class="cta-content">
+    <h2>Tu PC, Tus Reglas.</h2>
+    <p>Usa nuestro configurador 3D para diseñar y cotizar el ensamble de tus sueños en tiempo real. Compatibilidad garantizada por nuestros expertos.</p>
+    <a href="#" class="btn btn-secondary btn-large">Iniciar Configuración</a>
+  </div>
+</section>
+
+<section class="content-section">
+  <h2 class="section-title"><span>Recién Llegados</span></h2>
+  <div class="product-grid">
+    <div class="product-card" *ngFor="let product of newArrivals">
+      <div class="product-image">
+        <img [src]="product.imageUrl" [alt]="product.name">
+        <span class="product-tag new-tag" *ngIf="product.isNew">NUEVO</span>
+      </div>
+      <div class="product-info">
+        <p class="product-category">{{ product.category }}</p>
+        <h3 class="product-name">{{ product.name }}</h3>
+        <p class="product-price">${{ product.price }}</p>
+        <a href="#" class="btn btn-primary btn-small">Añadir al Carrito</a>
+      </div>
+    </div>
+  </div>
+</section>

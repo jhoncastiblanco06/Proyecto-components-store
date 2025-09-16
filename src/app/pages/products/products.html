@@ -1,0 +1,20 @@
+<h1>PRODUCTOS TECNOLÓGICOS</h1>
+
+<img src="/img/Tecnologia.jpg" alt="Banner de productos tecnológicos">
+
+<section class="productos">
+  @for (producto of productos; track producto.id) {
+    <article class="producto">
+      
+      <img [src]="producto.imagen" [alt]="producto.nombre">
+      
+      <h3>{{ producto.nombre }}</h3>
+      <p>{{ producto.descripcion }}</p>
+      <strong>{{ producto.precio }}</strong>
+      
+      <br>
+      <button>Ver Más</button>
+      
+    </article>
+  }
+</section>
