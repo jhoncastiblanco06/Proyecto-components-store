@@ -1,16 +1,20 @@
 /* src/styles.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ... el resto de tus estilos ... */
+@import "tailwindcss";
+/* 1. IMPORTAR LAS FUENTES PARA TODA LA APLICACIÓN */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600&display=swap');
+
+/* 2. ESTILOS BASE PARA EL CUERPO DE LA PÁGINA */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
+  margin: 0; /* Quita márgenes por defecto */
+  padding: 0; /* Quita rellenos por defecto */
+  background-color: #0d0c1d; /* ¡Este es el color de fondo oscuro que faltaba! */
+  color: #e0e0e0; /* Color de texto general */
+  font-family: 'Rajdhani', sans-serif; /* Fuente por defecto para toda la app */
+  box-sizing: border-box;
 }
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* ... (Aquí van los estilos para .hero, .categories, .product-card, .pc-builder, etc.) ... */
