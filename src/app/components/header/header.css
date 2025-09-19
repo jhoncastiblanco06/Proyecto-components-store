@@ -35,12 +35,37 @@
 .bottom-line.open {
   transform: rotate(-45deg) translate(5px, -5px);
 }
-/*
-  Añade este bloque para restaurar el efecto de neón del logo.
-  Usa la función theme() de Tailwind para mantener la consistencia de colores.
-*/
-.logo-link {
-  text-shadow: 0 0 5px theme('colors.primary-cyan'), 
-               0 0 10px theme('colors.primary-cyan'), 
-               0 0 20px theme('colors.primary-cyan');
+/* Estilos para el contenedor del ejemplo */
+body {
+  background-color: #0d0c1d;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+/* 1. Estilo Neón para el enlace completo (<a>) */
+.neon-link {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  text-decoration: none;
+  
+  /* Color base y brillo en MAGENTA */
+  color: #fff; /* Texto base blanco para que el brillo destaque */
+  text-shadow: 
+    0 0 7px #0ff3e0,
+    0 0 10px #0ff3e0,
+    0 0 21px #0ff3e0,
+    0 0 42px #0ff3e0;
+}
+
+/* 2. Estilo Neón específico para el <span> DENTRO del enlace */
+.neon-link span {
+  /* Color base y brillo en CIAN */
+  color: #fff;
+  text-shadow: 
+    0 0 7px #d0da14,
+    0 0 10px #d0da14,
+    0 0 21px #0c785a,
+    0 0 42px #0c785a;
 }
